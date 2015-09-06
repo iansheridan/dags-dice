@@ -7,5 +7,8 @@ module Dice
       100 if roll == 0
       roll
     end
+    def d20
+      rand(20)
+    end
   end
 end
