@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 
 gem 'rake'
+gem 'rack'
 gem 'grape'
 gem 'sinatra'
 gem 'hashie'
@@ -13,4 +14,5 @@ group :test do
   gem 'minitest'
   gem 'minitest-reporters'
   gem 'shoulda-context'
+  gem 'rack-test'
 end
