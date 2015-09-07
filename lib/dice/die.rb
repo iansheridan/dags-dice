@@ -8,7 +8,7 @@ module Dice
     module InstanceMethods
       def d100
         roll = "#{rand(10)}#{rand(10)}".to_i
-        100 if roll == 0
+        return 100 if roll == 0
         roll
       end
       def d20

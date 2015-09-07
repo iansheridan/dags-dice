@@ -7,11 +7,22 @@ class TestApi < Minitest::Test
   def app
     Api
   end
-  context 'Api' do
-    should '' do
+  context 'Api Version 1' do
+    should 'return a 200 response for root url' do
       get "/v1/"
-      # assert_equal( /[0-9]+/, @dice.roll.to_s )
       assert last_response.ok?
+    end
+    should 'return links to endpoints from root' do
+      get "/v1/"
+      expected = {
+        "endpoints" => [
+          {
+            "name" => "d100",
+            "url" => "/v1/roll/d100"
+          }
+        ]
+      }
+      assert_equal( JSON.parse(last_response.body), expected )
     end
   end
 end
