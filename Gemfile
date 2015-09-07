@@ -15,4 +15,5 @@ group :test do
   gem 'minitest-reporters'
   gem 'shoulda-context'
   gem 'rack-test'
+  gem 'codeclimate-test-reporter'
 end
