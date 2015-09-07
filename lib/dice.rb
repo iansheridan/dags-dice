@@ -1,3 +1,6 @@
-
-require 'dice/base'
+require 'hashie'
+require 'dice/die'
 require 'dice/roller'
+require 'dice/utility'
+require 'dice/utility/string'
+require 'dice/types'

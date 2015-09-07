@@ -6,7 +6,7 @@ class Api < Grape::API
   format :json
   get '/' do
     {
-      hello: "world"
+      roll: 
     }
   end
 end

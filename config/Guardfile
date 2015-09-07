@@ -1,3 +1,11 @@
 directories %w(lib test config).select{|d|
   Dir.exists?(d) ? d : UI.warning("Directory #{d} does not exist")
 }
+
+guard :minitest do
+  watch(%r{^test/(.*)\/?test_(.*)\.rb$})
+  watch(%r{^lib/(.*/)?([^/]+)\.rb$}) do |m|
+    "test/#{m[1]}test_#{m[2]}.rb"
+  end
+  watch(%r{^test/test_helper\.rb$}) { 'test' }
+end
