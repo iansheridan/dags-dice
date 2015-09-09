@@ -16,4 +16,6 @@ group :test do
   gem 'shoulda-context'
   gem 'rack-test'
   gem 'codeclimate-test-reporter'
+  gem 'capybara'
+  gem 'minitest-capybara'
 end
