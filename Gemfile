@@ -4,6 +4,7 @@ gem 'rake'
 gem 'rack'
 gem 'grape'
 gem 'sinatra'
+gem 'sinatra-config-file'
 gem 'hashie'
 
 group :development do
